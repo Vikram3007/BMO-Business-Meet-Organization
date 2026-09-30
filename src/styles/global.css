@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+}
+
+:root {
+  --color-primary-blue: #0757C9;
+  --color-dark-blue: #063B88;
+  --color-deep-navy: #032B66;
+  --color-bright-blue: #1677FF;
+  --color-very-light-blue: #EEF6FF;
+  --color-white: #FFFFFF;
+  --color-light-bg: #F7FAFD;
+  --color-gray-text: #667085;
+  --color-dark-text: #1F2937;
+  --color-border: #E5E7EB;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Headings use Cormorant Garamond */
+h1, h2, .font-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+body {
+  background-color: var(--color-light-bg);
+  color: var(--color-dark-text);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Card hover transitions */
+.hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px -6px rgba(7, 87, 201, 0.12), 0 8px 12px -6px rgba(7, 87, 201, 0.08);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}

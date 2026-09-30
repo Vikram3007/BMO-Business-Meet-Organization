@@ -1,0 +1,25 @@
+# BMO API Apache / cPanel Configuration
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /api/
+
+    # Block direct browser access to database configuration
+    RewriteRule ^config/ - [F,L]
+
+    # Clean URL rewrites (e.g. /api/event -> /api/endpoints/event.php)
+    RewriteRule ^event(\.php)?$ endpoints/event.php [L,QSA]
+    RewriteRule ^settings(\.php)?$ endpoints/settings.php [L,QSA]
+    RewriteRule ^journey(\.php)?$ endpoints/journey.php [L,QSA]
+    RewriteRule ^testimonials(\.php)?$ endpoints/testimonials.php [L,QSA]
+    RewriteRule ^gallery(\.php)?$ endpoints/gallery.php [L,QSA]
+    RewriteRule ^contact(\.php)?$ endpoints/contact.php [L,QSA]
+</IfModule>
+
+# Prevent directory listings
+Options -Indexes
+
+# Security headers for API
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "DENY"
+</IfModule>

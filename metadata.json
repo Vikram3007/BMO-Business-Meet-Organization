@@ -1,0 +1,6 @@
+{
+  "name": "BMO 150th Week Celebration",
+  "description": "BMO Business Meet Organization celebrates 150 weeks of business connections, trust, referrals and growth in Kumbakonam, Tamil Nadu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
